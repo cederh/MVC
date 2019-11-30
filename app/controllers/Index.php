@@ -1,20 +1,47 @@
 <?php
-    class Index extends MainController{
 
-        public function __construct(){
-        }
+class Index extends MainController{
 
-        public function index(){
+   public function __construct(){
+      //sessionUser();
+   }
 
-            $parameters = [
-                'title' => 'Bienvenidos a mi sitio web'
-            ];
+   public function index(){
 
-            $this->view('pages/index', $parameters);
-        }
+      $parameters = [
+          'menu' => 'Inicio'
+      ];
 
-        public function article(){
-            echo "MOSTRAR ARTICULOS";
-        }
-    }
+      $this->view('pages/index', $parameters);
+   }
+
+   public function preguntas(){
+
+      $parameters = [
+          'menu' => 'Preguntas'
+      ];
+
+      $this->view('pages/preguntas', $parameters);
+   }
+
+   public function ubicacion(){
+
+      $parameters = [
+          'menu' => 'Ubicacion'
+      ];
+
+      $this->view('pages/ubicacion', $parameters);
+   }
+
+   public function contactos(){
+
+      $parameters = [
+          'menu' => 'Contactos'
+      ];
+
+      $this->view('pages/contactos', $parameters);
+   }
+}
+
+
 ?>

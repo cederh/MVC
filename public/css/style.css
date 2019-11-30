@@ -1,0 +1,21 @@
+.caracteristicas p{
+    font-size: 14px;
+    margin-bottom: 0px;
+}
+
+.caracteristicas{
+    margin-bottom: 10px;
+}
+
+.descripcion h4{
+    margin-bottom: 0px;
+}
+
+.descripcion p{
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+
+.card{
+    margin-top: 10px;
+}
