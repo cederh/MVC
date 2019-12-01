@@ -57,32 +57,32 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?php echo ROUTE_URL?>/rentar" class="nav-link">
-                  <i class="fas fa-car"></i>
+              <a href="<?php echo ROUTE_URL?>/Renta" class="nav-link">
+                <i class="fas fa-car"></i>
                 <span class="nav-link-inner--text">Rentar</span>
               </a>
             </li>
             <li class="nav-item">
-              <a href="<?php echo ROUTE_URL?>/rentar" class="nav-link">
-                  <i class="fas fa-car"></i>
+              <a href="<?php echo ROUTE_URL?>/Renta/car" class="nav-link">
+                <i class="fas fa-car"></i>
                 <span class="nav-link-inner--text">Citas</span>
               </a>
             </li>
             <li class="nav-item">
               <a href="<?php echo ROUTE_URL?>/pages/preguntas" class="nav-link">
-                  <i class="fas fa-question-circle"></i>
+                <i class="fas fa-question-circle"></i>
                 <span class="nav-link-inner--text">Preguntas</span>
               </a>
             </li>
             <li class="nav-item">
               <a href="<?php echo ROUTE_URL?>/pages/ubicacion" class="nav-link">
-                  <i class="fas fa-map-marked-alt"></i>
+                <i class="fas fa-map-marked-alt"></i>
                 <span class="nav-link-inner--text">Ubicación</span>
               </a>
             </li>
             <li class="nav-item">
               <a href="<?php echo ROUTE_URL?>/pages/contactos" class="nav-link">
-                  <i class="fas fa-envelope"></i>
+                <i class="fas fa-envelope"></i>
                 <span class="nav-link-inner--text">Contactos</span>
               </a>
             </li>

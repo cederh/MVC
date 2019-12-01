@@ -13,13 +13,13 @@
             <a href="https://www.creative-tim.com/presentation" class="nav-link" target="_blank">Acerca de nosotros</a>
           </li>
           <li class="nav-item">
-            <a href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md"
-             class="nav-link" target="_blank">MIT License</a>
+            <a href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md" class="nav-link"
+              target="_blank">MIT License</a>
           </li>
         </ul>
       </div>
     </div>
-   </div>
+  </div>
 </footer>
 <!-- Core -->
 <script src="<?php echo ROUTE_URL?>/assets/vendor/jquery/jquery.min.js"></script>

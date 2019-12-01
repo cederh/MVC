@@ -7,7 +7,6 @@ class Index extends MainController{
    }
 
    public function index(){
-
       $parameters = [
           'menu' => 'Inicio'
       ];
