@@ -2,7 +2,7 @@
     // Credenciales de acceso a la base de datos
     define('DB_HOST', 'localhost');
     define('DB_USER', 'root');
-    define('DB_NAME', '');
+    define('DB_NAME', 'donovan');
     define('DB_PASS', '');
 
     // Establecemos la ruta de nuestra aplicación

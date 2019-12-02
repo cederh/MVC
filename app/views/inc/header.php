@@ -26,7 +26,7 @@
     <nav id="navbar-main" class="navbar navbar-main navbar-expand-lg navbar-transparent navbar-light headroom">
       <div class="container">
         <a class="navbar-brand mr-lg-5" href="<?php echo ROUTE_URL?>/index">
-          <img alt="image" src="<?php echo ROUTE_URL?>/img/logo-white.png">
+          <img alt="image" src="<?php echo ROUTE_URL?>/img/logo.png">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global"
           aria-controls="navbar_global" aria-expanded="false" aria-label="Toggle navigation">
@@ -64,7 +64,7 @@
             </li>
             <li class="nav-item">
               <a href="<?php echo ROUTE_URL?>/Renta/car" class="nav-link">
-                <i class="fas fa-car"></i>
+                <i class="fas fa-clipboard-list"></i>
                 <span class="nav-link-inner--text">Citas</span>
               </a>
             </li>
@@ -95,6 +95,12 @@
                 <span class="nav-link-inner--text d-lg-none">Facebook</span>
               </a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link nav-link-icon" href="<?php echo ROUTE_URL?>/pages/login"
+                data-toggle="tooltip" title="Inicio de Sesión">
+                <i class="fas fa-user-circle"></i>
+                <span class="nav-link-inner--text d-lg-none">Inicio de Sesión</span>
+              </a>
           </ul>
         </div>
       </div>

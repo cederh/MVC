@@ -104,48 +104,30 @@
               </div>
             </div>
           </div>
-          <div class="row justify-content-center">
-            <div class="col-lg-12">
-              <form action="<?php echo ROUTE_URL?>/Renta/carselect" method="post">
-                <div class="row row-grid">
-                  <div class="col-lg-4">
-                    <div class="card bg-default shadow border-0">
-                      <img src="<?php echo ROUTE_URL?>/public/img/carros/01.png" class="card-img-top" alt="image">
-                      <blockquote class="card-blockquote">
-                        <!-- Comentar esta linea si quieten eliminar la esquina de la imagen -->
+          <div class="card-body">
+            <div class="row justify-content-center inventario">
+                <?php if ($parameters['inventary'] != ""): ?>
+                <?php foreach ($parameters['inventary'] as $key => $producto): ?>
 
-                        <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
-                          class="svg-bg">
-                          <polygon points="0,52 583,95 0,95" class="fill-default" />
-                          <polygon points="0,42 583,95 683,0 0,95" opacity=".2" class="fill-default" />
-                        </svg>
-
-                        <div class="descripcion">
-                          <h4 class="display-3 font-weight-bold text-white">Toyota Camry </h4>
-                          <p class="lead text-italic text-white">Lujoso - Automático</p>
-                        </div>
-                        <div class="caracteristicas">
-                          <p class="text-white"><i class="fas fa-snowflake"></i> A/A</p>
-                          <p class="text-white"><i class="fas fa-road"></i> Kilometraje Ilimitado</p>
-                        </div>
-                        <input type="text" style="display: none" name="recogida"
-                          value="<?php echo $recogida = $_POST['recogida'];?>">
-                        <input type="text" style="display: none" name="entrega"
-                          value="<?php echo $entrega = $_POST['entrega'];?>">
-                        <input type="text" style="display: none" name="dateEntrega"
-                          value="<?php echo $dateEntrega = $_POST['dateEntrega'];?>">
-                        <input type="text" style="display: none" name="datedevol"
-                          value="<?php echo $datedevol = $_POST['datedevol'];?>">
-                        <input type="text" style="display: none" name="hora"
-                          value="<?php echo $hora = $_POST['hora'];?>">
-                        <input type="submit" class="btn btn-primary" value="Rentar">
-                      </blockquote>
+                <div class="card shadow-lg p-3 m-3 mb-5 bg-black rounded" style="width: 18rem;">
+                    <img src="<?php echo ROUTE_URL?>/assets/img/brand/<?php echo $producto->foto?>" class="card-img-top"
+                        alt="Card image cap">
+                    <div class="card-body">
+                        <h3 class="card-title"><b><?php echo $producto->nombre?></b></h3>
+                        <p class="">
+                            <i class="fas fa-users"></i> <?php echo $producto->capacidad?> Personas<br />
+                            <i class="fas fa-door-open"></i> <?php echo $producto->npuertas?> Puertas<br />
+                            <i class="fas fa-car"></i> <?php echo $producto->modelo?><br />
+                            <i class="fas fa-comment-dollar"></i> $<?php echo $producto->precio?>
+                        </p>
+                        <a href="<?php echo ROUTE_URL?>/inventary/view_inventary/<?php echo $producto->idvehiculo?>"
+                            class="btn btn-primary btn-block">Ver mas</a>
                     </div>
-                  </div>
                 </div>
-              </form>
+                <?php endforeach?>
+                <?php endif?>
             </div>
-          </div>
+        </div>
         </div>
       </div>
       <div class="separator separator-bottom separator-skew zindex-100">

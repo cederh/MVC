@@ -47,11 +47,12 @@
         <span class="span-50"></span>
         <span class="span-100"></span>
       </div>
+      <form action="<?php echo ROUTE_URL?>/Index/add_consult" method="post">
       <div class="container">
         <div class="content-center">
           <div class="row">
             <div class="col-md-12">
-              <form action="#">
+              <form action="<?php echo ROUTE_URL?>/Index/add_consult" method="post">
                 <h4 class="text-white">Formulario de contacto</h4>
                 <div class="row">
                   <div class="col-md-6">
@@ -113,32 +114,10 @@
                     </div>
                   </div>
                 </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <div class="g-recaptcha" data-sitekey="6LeeJykUAAAAAM3_Nu1SDFP6aRDipraq4I1_-MF6">
-                        <div style="width: 304px; height: 78px;">
-                          <div>
-                            <iframe
-                              src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LeeJykUAAAAAM3_Nu1SDFP6aRDipraq4I1_-MF6&amp;co=aHR0cHM6Ly9tZXhyZW50YWNhci5jb206NDQz&amp;hl=es-419&amp;v=75nbHAdFrusJCwoMVGTXoHoM&amp;size=normal&amp;cb=c7zs12uu6wnw"
-                              role="presentation" name="a-5ebbae2admim" scrolling="no"
-                              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox allow-storage-access-by-user-activation"
-                              width="304" height="78" frameborder="0">
-                            </iframe>
-                          </div>
-                          <textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response"
-                            style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;">
-                                 </textarea>
-                        </div>
-                      </div>
-                    </div>
+                <br>
+                  <div class="text-center">>
+                      <input type="submit" class="btn btn-neutral" value="Enviar mensaje">
                   </div>
-                  <div class="col-md-3">
-                    <div class="form-group">
-                      <input type="submit" class="btn btn-primary" value="Enviar mensaje">
-                    </div>
-                  </div>
-                </div>
               </form>
             </div>
           </div>

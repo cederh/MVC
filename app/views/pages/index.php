@@ -87,157 +87,31 @@
         <span class="span-100"></span>
       </div>
       <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-12">
-            <div class="row row-grid">
-              <div class="col-lg-4">
-                <div class="card bg-default shadow border-0">
-                  <img src="img/carros/01.png" class="card-img-top" alt="image">
-                  <blockquote class="card-blockquote">
-                    <!-- Comentar esta linea si quieten eliminar la esquina de la imagen -->
+        <div class="card-body">
+          <div class="row justify-content-center inventario">
+              <?php if ($parameters['inventary'] != ""): ?>
+              <?php foreach ($parameters['inventary'] as $key => $producto): ?>
 
-                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
-                      class="svg-bg">
-                      <polygon points="0,52 583,95 0,95" class="fill-default" />
-                      <polygon points="0,42 583,95 683,0 0,95" opacity=".2" class="fill-default" />
-                    </svg>
-
-                    <div class="descripcion">
-                      <h4 class="display-3 font-weight-bold text-white">Toyota Camry </h4>
-                      <p class="lead text-italic text-white">Lujoso - Automático</p>
-                    </div>
-                    <div class="caracteristicas">
-                      <p class="text-white"><i class="fas fa-snowflake"></i> A/A</p>
-                      <p class="text-white"><i class="fas fa-road"></i> Kilometraje Ilimitado</p>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-sm btn-block"><i class="fas fa-check-square"></i> Rentar</a>
-                  </blockquote>
-                </div>
+              <div class="card shadow-lg p-3 m-3 mb-5 bg-black rounded" style="width: 18rem;">
+                  <img src="<?php echo ROUTE_URL?>/assets/img/brand/<?php echo $producto->foto?>" class="card-img-top"
+                      alt="Card image cap">
+                  <div class="card-body">
+                      <h3 class="card-title"><b><?php echo $producto->nombre?></b></h3>
+                      <p class="">
+                          <i class="fas fa-snowflake"></i>A/A<br />
+                          <i class="fas fa-road"></i>Kilometraje Ilimitado<br />
+                          <i class="fas fa-door-open"></i> <?php echo $producto->npuertas?> Puertas<br />
+                          <i class="fas fa-car"></i> <?php echo $producto->descripcion?><br />
+                          <i class="fas fa-comment-dollar"></i> $<?php echo $producto->precio?>
+                      </p>
+                      <a href="<?php echo ROUTE_URL?>/inventary/view_inventary/<?php echo $producto->idvehiculo?>"
+                          class="btn btn-primary btn-block">Información</a>
+                  </div>
               </div>
-              <div class="col-lg-4">
-                <div class="card bg-default shadow border-0">
-                  <img src="img/carros/02.png" class="card-img-top" alt="image">
-                  <blockquote class="card-blockquote">
-                    <!-- Comentar esta linea si quieten eliminar la esquina de la imagen -->
-
-                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
-                      class="svg-bg">
-                      <polygon points="0,52 583,95 0,95" class="fill-default" />
-                      <polygon points="0,42 583,95 683,0 0,95" opacity=".2" class="fill-default" />
-                    </svg>
-
-                    <div class="descripcion">
-                      <h4 class="display-3 font-weight-bold text-white">Toyota Yaris </h4>
-                      <p class="lead text-italic text-white">Lujoso - Automático</p>
-                    </div>
-                    <div class="caracteristicas">
-                      <p class="text-white"><i class="fas fa-snowflake"></i> A/A</p>
-                      <p class="text-white"><i class="fas fa-road"></i> Kilometraje Ilimitado</p>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-sm btn-block"><i class="fas fa-check-square"></i> Rentar</a>
-                  </blockquote>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="card bg-default shadow border-0">
-                  <img src="img/carros/03.png" class="card-img-top" alt="image">
-                  <blockquote class="card-blockquote">
-                    <!-- Comentar esta linea si quieten eliminar la esquina de la imagen -->
-
-                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
-                      class="svg-bg">
-                      <polygon points="0,52 583,95 0,95" class="fill-default" />
-                      <polygon points="0,42 583,95 683,0 0,95" opacity=".2" class="fill-default" />
-                    </svg>
-
-                    <div class="descripcion">
-                      <h4 class="display-3 font-weight-bold text-white">Hyundai Creta</h4>
-                      <p class="lead text-italic text-white">Compacta - Automática</p>
-                    </div>
-                    <div class="caracteristicas">
-                      <p class="text-white"><i class="fas fa-snowflake"></i> A/A</p>
-                      <p class="text-white"><i class="fas fa-road"></i> Kilometraje Ilimitado</p>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-sm btn-block"><i class="fas fa-check-square"></i> Rentar</a>
-                  </blockquote>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="card bg-default shadow border-0">
-                  <img src="img/carros/04.png" class="card-img-top" alt="image">
-                  <blockquote class="card-blockquote">
-                    <!-- Comentar esta linea si quieten eliminar la esquina de la imagen -->
-
-                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
-                      class="svg-bg">
-                      <polygon points="0,52 583,95 0,95" class="fill-default" />
-                      <polygon points="0,42 583,95 683,0 0,95" opacity=".2" class="fill-default" />
-                    </svg>
-                    <!-- --------------------------------------------------------------- -->
-                    <div class="descripcion">
-                      <h4 class="display-3 font-weight-bold text-white">Kia Sportage</h4>
-                      <p class="lead text-italic text-white">Mediana - Automático</p>
-                    </div>
-                    <div class="caracteristicas">
-                      <p class="text-white"><i class="fas fa-snowflake"></i> A/A</p>
-                      <p class="text-white"><i class="fas fa-road"></i> Kilometraje Ilimitado</p>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-sm btn-block"><i class="fas fa-check-square"></i> Rentar</a>
-                  </blockquote>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="card bg-default shadow border-0">
-                  <img src="img/carros/05.png" class="card-img-top" alt="image">
-                  <blockquote class="card-blockquote">
-                    <!-- Comentar esta linea si quieten eliminar la esquina de la imagen -->
-
-                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
-                      class="svg-bg">
-                      <polygon points="0,52 583,95 0,95" class="fill-default" />
-                      <polygon points="0,42 583,95 683,0 0,95" opacity=".2" class="fill-default" />
-                    </svg>
-
-                    <div class="descripcion">
-                      <h4 class="display-3 font-weight-bold text-white">Chevrolet </h4>
-                      <p class="lead text-italic text-white">Lujoso - Automático</p>
-                    </div>
-                    <div class="caracteristicas">
-                      <p class="text-white"><i class="fas fa-snowflake"></i> A/A</p>
-                      <p class="text-white"><i class="fas fa-road"></i> Kilometraje Ilimitado</p>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-sm btn-block"><i class="fas fa-check-square"></i> Rentar</a>
-                  </blockquote>
-                </div>
-              </div>
-              <div class="col-lg-4">
-                <div class="card bg-default shadow border-0">
-                  <img src="img/carros/06.png" class="card-img-top" alt="image">
-                  <blockquote class="card-blockquote">
-                    <!-- Comentar esta linea si quieten eliminar la esquina de la imagen -->
-
-                    <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95"
-                      class="svg-bg">
-                      <polygon points="0,52 583,95 0,95" class="fill-default" />
-                      <polygon points="0,42 583,95 683,0 0,95" opacity=".2" class="fill-default" />
-                    </svg>
-
-                    <div class="descripcion">
-                      <h4 class="display-3 font-weight-bold text-white">Toyota Hiace</h4>
-                      <p class="lead text-italic text-white">Grande - Automática</p>
-                    </div>
-                    <div class="caracteristicas">
-                      <p class="text-white"><i class="fas fa-snowflake"></i> A/A</p>
-                      <p class="text-white"><i class="fas fa-road"></i> Kilometraje Ilimitado</p>
-                    </div>
-                    <a href="#" class="btn btn-primary btn-sm btn-block"><i class="fas fa-check-square"></i> Rentar</a>
-                  </blockquote>
-                </div>
-              </div>
-
-            </div>
+              <?php endforeach?>
+              <?php endif?>
           </div>
-        </div>
+      </div>
       </div>
       <!-- SVG separator -->
       <div class="separator separator-bottom separator-skew">

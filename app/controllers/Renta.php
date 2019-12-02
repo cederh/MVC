@@ -3,6 +3,7 @@
 class Renta extends MainController{
 
    public function __construct(){
+     $this->ModelIndex = $this->Model('ModelIndex');
       //sessionUser();
    }
 
@@ -16,6 +17,7 @@ class Renta extends MainController{
    }
 
    public function car(){
+      $inventary = $this->ModelIndex->get_inventaries();
      if ($_SERVER["REQUEST_METHOD"]=='POST') {
         $rent['recogida'] = $_POST['recogida'];
         $rent['entrega'] = $_POST['entrega'];
@@ -26,6 +28,7 @@ class Renta extends MainController{
 
      $parameters = [
         'menu' => 'Renta',
+        'inventary' => $inventary,
         'rent' => $rent
      ];
 
@@ -67,6 +70,7 @@ class Renta extends MainController{
    }
 
    public function add_rent(){
+
    if ($_SERVER['REQUEST_METHOD'] == 'POST'){
       // Limpiando los datos enviados por el usuario
       if ($_SERVER["REQUEST_METHOD"]=='POST') {
